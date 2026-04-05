@@ -10,8 +10,6 @@ user: process.env.DB_USER,
   port: process.env.DB_PORT,
 });
 
-console.log("SYSTEM USER:", process.env.USER);
-console.log("PASSWORD:", process.env.PASSWORD);
 await db.connect();
 console.log("✅ DB CONNECTED");
 
