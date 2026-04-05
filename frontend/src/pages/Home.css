@@ -1,0 +1,68 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.home-page {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.home-container {
+  width: 450px;
+  padding: 30px;
+  border-radius: 16px;
+  
+  background: var(--card);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.home-container:hover {
+  transform: translateY(-5px);
+}
+
+.home-heading {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: var(--text);
+}
+
+.home-title {
+  margin-top: 18px;
+  font-size: 14px;
+  color: black
+}
+
+.home-button {
+  width: 60%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f7c642;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s linear;
+}
+
+.home-button:hover {
+ width: 80%;
+  background: rgb(228, 164, 38);
+  transform: scale(1.03);
+}
+
+.home-button {
+  transition: all 0.3s ease 0.4;
+}
+
+.home-button:hover {
+  transform: translateY(-2px);
+}

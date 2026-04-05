@@ -1,0 +1,54 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5ba13;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 300;
+    letter-spacing: 1px; 
+}
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  transition: all 1 ease 1;
+}
+
+nav a:hover {
+    color: black;
+  text-decoration: underline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+/* 🔥 Fix logout button */
+.logout-btn {
+  background: none;
+  border: none;
+  margin-left: 15px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.logout-btn:hover,
+.nav-link:hover {
+  color: black;
+  text-decoration: underline;
+}

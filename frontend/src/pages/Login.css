@@ -1,0 +1,105 @@
+.Login-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Login-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.Login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;   /* ✅ spacing */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.title {
+  text-align: center;
+}
+
+.Login-input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Login-input label {
+  font-weight: bold;
+}
+
+.Login-input input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.Login-button,
+.Login-google {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.Login-button {
+  background: #f7c642;
+  color: white;
+}
+
+.Login-button:hover {
+  background: #d49c0f;
+}
+
+.Login-google {
+  background: #4285F4;
+  color: white;
+}
+.Login-google:hover {
+  background: #14089c;
+}
+
+.Login-button {
+  display: block;
+}
+.Login-form button {
+  position: static !important;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.error {
+  animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}

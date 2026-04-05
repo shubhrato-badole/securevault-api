@@ -1,0 +1,19 @@
+.todo-content{
+  font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 10px;
+    font-size: 16px;
+     background: #f4ca59;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+
+
+.todo-content:hover {
+  transform: translateY(-2px);
+}
+

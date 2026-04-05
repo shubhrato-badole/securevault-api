@@ -1,0 +1,19 @@
+:root {
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --text: #111827;
+  --subtext: #6b7280;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f9fafb);
+}
