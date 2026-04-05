@@ -4,7 +4,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #f5ba13;
-  margin: auto -16px;
+  margin: 0;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -17,11 +17,11 @@ header h1 {
 }
 
 nav a {
-  margin-left: 15px;
+  margin-left: 20px;
   text-decoration: none;
   color: white;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight:700;
+  font-size: 30px;
   transition: all 1 ease 1;
 }
 

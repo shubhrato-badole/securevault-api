@@ -8,11 +8,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SecureRoutes from "../pages/secureRoutes"; 
 
 
+
 function App(){
   return (
   <Router>
      <Routes>
  <Route path="/" element={<Home />} />
+ 
  <Route path="/login" element={ <Login />}/>
 <Route path="/register" element={ <Register />}/>
 <Route path="/todo" element= { <SecureRoutes> <ToDoList /> </SecureRoutes>}/>

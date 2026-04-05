@@ -1,32 +1,60 @@
-import React from "react"
-import { Link } from "react-router-dom";
+import React, {useState}from "react"
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import"./Home.css"
-
-
+import "./Home.css"
+import { useNavigate } from "react-router-dom";
 
 function Home (){
+const navigate = useNavigate();
+
+  async function handleCahnge (path){
+    try {
+      const result = await API.get("/api/auth/me")
+      navigate(path)
+    }catch (err){
+      navigate("/login")
+    }
+
+  }
 
 return(
       <div className="app-container">
  <Header /> 
 <div className="home-page">
-    
-    <div className= "home-container">
-<h1 className="home-heading"> let get start with keeper </h1>
+            <div className= "home-container">
+               <div className="badge"><span className="bdot"></span>Your personal workspace</div>
+               <h1 className="home-heading"> keep your <span className="yl">notes</span> & <span className="pu">todos</span> in one place </h1>
 
-   <h2 className="home-title">Login</h2>
+               <p className="home-sub"> Capture ideas instantly and stay on top of your tasks — simple, fast, and always within reach.
+               </p>
 
-      <Link to="/login">
-      <button className="home-button" >login</button>
-      </Link>
-        
-        <h2 className="home-title">Register</h2>
+               <div className="cards" > 
+                <div className="card notes" onClick={ ()=> handleCahnge("/keeper")}>
+                    <div className="card-top"></div> 
+                <div className="ci">📝</div>
+                  <h3>notes</h3>
+                  <p>Capture thoughts and ideas worth remembering.</p>
+                   <span className="card-btn">Open Notes →</span>
+                   </div>
+               
+                
 
-      <Link to="/register">
-      <button className="home-button">register</button>
-      </Link>
+                
+                 <div className="card todo" onClick={ ()=> handleCahnge("/todo")}>
+                    <div className="card-top"></div> 
+                <div className="ci">✅</div>
+                  <h3>todo</h3>
+                  <p>Stay focused with a clean, satisfying task list.</p>
+                   <span className="card-btn">Open todo →</span>
+                   </div>
+               </div>
+                 
+               <div className="extras">
+               <span className="tag">✦ Free forever</span>
+               <span className="tag">✦ No clutter</span>
+              <span className="tag">✦ Always synced</span> 
+               </div>
+
 </div>
      
 </div>

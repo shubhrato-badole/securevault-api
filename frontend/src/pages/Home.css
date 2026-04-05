@@ -1,68 +1,184 @@
-.app-container {
-  display: flex;
-  flex-direction: column;
+.app-container{
+  display:flex;
+  flex-direction:column;
   min-height: 100vh;
 }
 
-.home-page {
-  flex: 1;
+.home-page{
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  padding: 20px;
+  background: linear-gradient(145deg, #eef2ff 0%, #f0f4ff 50%, #fef3ff 100%);
+  padding: 3rem 1.5rem;
 }
 
-.home-container {
-  width: 450px;
-  padding: 30px;
-  border-radius: 16px;
+.home-container{
+  max-width: 700px;
+  width: 100%;
+  text-align:center;
+  display:flex;
+   flex-direction: column;
+  align-items:center;
+  gap:1rem;
+
+}
+
+.badge{
+  display:inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 1.5px solid #f5b71e;
+   border-radius: 100px;
+  padding: 6px 16px;
+   font-size:11px;
+   font-weight: 700;
+letter-spacing: 2px;
+color :#c48a00;
+ text-transform: uppercase;
+ margin-bottom: 8px;
+  box-shadow: 0 2px 12px rgba(245,183,30,0.2);
+}
+
+
+.bdot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;       /* makes it a circle */
+  background: #f5b71e;
+  animation: pp 1.8s linear infinite;
+}
+
+@keyframes pp {
+  0% ,100%
+{ opacity: 1; }
+  50% { opacity: 0.3; }
+  }
   
-  background: var(--card);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: 0.3s;
-}
 
-.home-container:hover {
-  transform: translateY(-5px);
-}
+.home-heading{
+  font-size: clamp(2rem, 5vw, 3.2rem);
+font-weight:900;
+line-height: 1.12;
+  color: #1e1b4b;
+   margin-bottom: 8px;
 
-.home-heading {
-  margin-bottom: 15px;
-  font-size: 22px;
-  color: var(--text);
 }
+.yl{ color: #f5b71e; }
+  .pu { color: #7c3aed; }
 
-.home-title {
-  margin-top: 18px;
-  font-size: 14px;
-  color: black
-}
+  .home-sub{
+    color: grey;
+    font-size: 20px;
+    margin-bottom: 16px;
+     max-width: 400px;
+  line-height: 1.8;
+  }
 
-.home-button {
-  width: 60%;
-  padding: 12px;
-  margin: 10px 0;
-  border-radius: 10px;
+  .cards{
+    display:flex;
+    flex-direction:row;
+    gap: 20px;
+  justify-content: center;
+  margin-bottom: 24px;
+  }
+
+  .card {
+   width: 200px;          /* ← try this */
+  min-height: 240px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 32px 24px 28px;
   cursor: pointer;
-  background: #f7c642;
-  border: none;
-  color: white;
-  font-size: 15px;
+  text-align: left;
+   box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+   transition: transform 0.3s ease;
+  }
+
+  .card:hover{
+    transform:translateY(-8px); 
+  }
+
+  .card.notes {
+  border: 2px solid #fde68a;
+}
+
+.card.notes:hover {
+  border-color: #f5b71e;
+  box-shadow: 0 16px 40px rgba(245,183,30,0.25);
+
+}
+
+.card.todo {
+  border: 2px solid #e9d5ff;
+}
+.card.todo:hover {
+  border-color: #a855f7;
+  box-shadow: 0 16px 40px rgba(168,85,247,0.2);
+}
+
+
+/* .card.notes:hover {
+  border-color: #f5b71e;
+  box-shadow: 0 16px 40px rgba(245,183,30,0.25);
+} */
+
+.card-top {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.notes .card-top { background: linear-gradient(90deg, #f5b71e, #fb923c); }
+.todo .card-top { background: linear-gradient(90deg, #a855f7, #ec4899); }
+
+.ci {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 23px;
+  /* text-align: center; */
+  font-weight: 800;
+  color: #1e1b4b;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.card p {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+.card-btn {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+   border-radius: 50px;
+}
+
+.notes .card-btn { background: #fffbeb; color: #d97706; }
+.todo .card-btn { margin-top: 35px;
+  background: #faf5ff; color: #9333ea; }
+
+
+
+.extras {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: 12px;
+  color: #6b7280;
   font-weight: 500;
-  transition: all 0.3s linear;
-}
-
-.home-button:hover {
- width: 80%;
-  background: rgb(228, 164, 38);
-  transform: scale(1.03);
-}
-
-.home-button {
-  transition: all 0.3s ease 0.4;
-}
-
-.home-button:hover {
-  transform: translateY(-2px);
 }
