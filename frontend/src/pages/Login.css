@@ -1,105 +1,198 @@
-.Login-page {
-  min-height: 100vh;
+.login-page {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
-.Login-container {
+.login-container {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  background: linear-gradient(145deg, #eef2ff 0%, #f0f4ff 50%, #fef3ff 100%);
+  padding: 40px 20px;
 }
 
-.Login-form {
+.split-card {
+  display: flex;
+  flex-direction: row;
+  width: 560px;
+  min-height: 460px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+}
+
+.split-left {
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  background: #f5b71e;
+  padding: 40px 24px;
   display: flex;
   flex-direction: column;
-  gap: 15px;   /* ✅ spacing */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  justify-content: center;
 }
 
-.title {
-  text-align: center;
+.split-left h1 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 12px;
 }
 
-.Login-input {
+.split-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.7;
+}
+
+.split-dots {
+  display: flex;
+  gap: 6px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+.dot.active {
+  background: #fff;
+}
+
+.split-right {
+  width: 360px;
+  background: #ffffff;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.form-sub {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 28px;
+}
+
+/* ── THIS IS THE KEY FIX ── */
+.split-right form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.field {
   display: flex;
   flex-direction: column;
   gap: 5px;
-}
-
-.Login-input label {
-  font-weight: bold;
-}
-
-.Login-input input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.Login-button,
-.Login-google {
+  margin-bottom: 16px;
   width: 100%;
-  padding: 12px;
+}
+
+.field label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e7eb;
   border-radius: 8px;
+  font-size: 13px;
+  color: #0f172a;
+  background: #f8fafc;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.field input:focus {
+  border-color: #f5b71e;
+  background: #fffbeb;
+  box-shadow: 0 0 0 3px rgba(245,183,30,0.15);
+}
+
+.field input::placeholder {
+  color: #cbd5e1;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 11px;
+  background: #f5b71e;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(245,183,30,0.4);
+  transition: background 0.2s;
 }
 
-.Login-button {
-  background: #f7c642;
-  color: white;
+.btn-login:hover {
+  background: #e8a90f;
 }
 
-.Login-button:hover {
-  background: #d49c0f;
-}
-
-.Login-google {
-  background: #4285F4;
-  color: white;
-}
-.Login-google:hover {
-  background: #14089c;
-}
-
-.Login-button {
-  display: block;
-}
-.Login-form button {
-  position: static !important;
-}
-
-.google-btn {
+.btn-google {
+  width: 100%;
+  padding: 10px;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  transition: background 0.2s;
 }
 
-.google-btn img {
-  width: 20px;
-  height: 20px;
+.btn-google:hover {
+  background: #f9fafb;
 }
 
-.error {
-  color: red;
-  margin-bottom: 10px;
-  font-size: 14px;
+.bottom-link {
   text-align: center;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.bottom-link a {
+  color: #7c3aed;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .error {
-  animation: fadeOut 3s forwards;
-}
-
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
+  color: #ef4444;
+  font-size: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 8px 12px
 }

@@ -29,7 +29,7 @@ function CreateArea(props) {
   }
 
   return (
-    <div>
+    <div className="create-area">
       <form>
         <input
           name="title"
@@ -46,7 +46,7 @@ function CreateArea(props) {
           rows="3"
           required
         />
-        <button onClick={submitNote}> <AddIcon/></button>
+        <button  className="addbutton"onClick={submitNote}> <AddIcon/></button>
       </form>
     </div>
   );

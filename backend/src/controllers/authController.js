@@ -3,8 +3,6 @@ import db from "../datbase.js"
 import {generateTokens} from "../utils/token.js"
 
 
-
-
 export const register = async (req, res) =>{
     const { email ,password }= req.body;
    

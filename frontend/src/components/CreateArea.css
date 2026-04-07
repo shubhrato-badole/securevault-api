@@ -1,5 +1,6 @@
 
-form {
+.create-area form {
+  width: 480px;
   position: relative;
   width: 480px;
   margin: 30px auto 20px auto;
@@ -18,7 +19,7 @@ form textarea {
   font-family: inherit;
   resize: none;
 }
-form button {
+.addbutton{
   position: absolute;
   right: 18px;
   bottom: -18px;

@@ -7,15 +7,16 @@ import { useNavigate } from "react-router-dom";
 function Home (){
 const navigate = useNavigate();
 
-  async function handleCahnge (path){
+  async function handleCahnge(path){
     try {
       const result = await API.get("/api/auth/me")
-      navigate(path)
+       return navigate(path);
     }catch (err){
       navigate("/login")
     }
 
   }
+  console.log(handleCahnge)
 
 return(
       <div className="app-container">
