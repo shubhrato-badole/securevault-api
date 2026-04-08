@@ -55,8 +55,12 @@ setList(result.data);
       <Header />
       <div className="todo-container">
         <div className="todo-card">
-
+    <div className="todo-heading">
           <h1 className="todo-title">My Task</h1>
+      
+         </div>
+          <div className="p">   <p className="pp">  {list.length} tasks</p></div>
+
       <ToDoItem  additem={addItem} />
 
       <div className="todo-list">

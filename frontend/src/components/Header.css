@@ -27,7 +27,7 @@ nav a {
 
 nav a:hover {
     color: black;
-  text-decoration: underline;
+
 }
 
 .nav-link {
@@ -42,7 +42,8 @@ nav a:hover {
   border: none;
   margin-left: 15px;
   color: white;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight:700;
   cursor: pointer;
   padding: 0;
 }
@@ -50,5 +51,4 @@ nav a:hover {
 .logout-btn:hover,
 .nav-link:hover {
   color: black;
-  text-decoration: underline;
 }

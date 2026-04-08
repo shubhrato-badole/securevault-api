@@ -3,17 +3,24 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./Home.css"
 import { useNavigate } from "react-router-dom";
+import API from "./Api"
 
 function Home (){
 const navigate = useNavigate();
 
-  async function handleCahnge(path){
-    try {
+  async function handleCahnge (path){
+   
+    try{
       const result = await API.get("/api/auth/me")
-       return navigate(path);
-    }catch (err){
-      navigate("/login")
-    }
+   if(result === 401){
+    navigate("/login")
+   }else {
+    navigate(path)
+   }
+  } catch (err){
+    console.log(err)
+
+  }
 
   }
   console.log(handleCahnge)

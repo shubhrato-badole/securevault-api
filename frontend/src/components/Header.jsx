@@ -44,20 +44,20 @@ return (
       <h1>Keeper</h1>
 
       <nav className="nav-Links">
-        <Link className="nav-links" to="/"> <HomeIcon sx={{ fontSize: 30}}/></Link>
+        <Link className="nav-links" to="/"> Home</Link>
 
      { isAuthenticated ? (    <>
 
         <Link className="nav-links" to="/keeper">Notes</Link>
         <Link className="nav-links" to="/todo">Todo</Link>
-        <button onClick={handleClick} className="logout-btn"><LogoutIcon/></button>
+        <button onClick={handleClick} className="logout-btn"> Logout</button>
          
         </>
     ) : (
          <>
        
-        <Link className="nav-links" to="/login"><LoginIcon sx={{ fontSize: 30}}/></Link>
-        <Link className="nav-links" to="/register"><HowToRegTwoToneIcon sx={{ fontSize: 30}}/></Link>
+        <Link className="nav-links" to="/login">Login </Link>
+        <Link className="nav-links" to="/register">Home</Link>
         </>
  ) }
       </nav>

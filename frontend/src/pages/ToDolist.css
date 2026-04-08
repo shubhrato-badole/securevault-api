@@ -23,10 +23,34 @@ flex-direction: column;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+
+.todo-heading{
+  display :flex;
+  flex-direction: column;
+
+}
+.todo-heading p{
+ align-self: flex-end;
+ 
+}
+
+.p{
+ display: flex;
+ justify-content: end;
+ margin-bottom: 15px;
+}
+
+.pp{
+ padding:10px;
+background: #fffbeb; color: #d97706;
+border-radius: 20px;
+}
+
 .todo-title
 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  
 }
 
 .todo-card {

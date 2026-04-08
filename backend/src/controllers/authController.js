@@ -128,6 +128,9 @@ export const logout = (req, res) => {
   res.json({ message: "Logged out" });
 };
 
-export const me = (req, res) => {
+
+
+export const me = (req, res , next ) => {
+    const userId = req.userId;
   res.json({ message: "User authenticated" });
 };
