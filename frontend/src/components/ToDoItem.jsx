@@ -20,7 +20,7 @@ function hanldeClick(event) {
 return(
 
     <div className="input-container">
-     <input  className="input" value={item} onChange={handleChange}type="text" name="task" placeholder="add task"  required  />
+     <input   type="checkbox" className="input" value={item} onChange={handleChange}type="text" name="task" placeholder="Add a new task..."  required  />
       <button className="add-btn"onClick={hanldeClick}><AddIcon/></button>
     </div>
 )

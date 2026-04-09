@@ -57,7 +57,7 @@ return (
          <>
        
         <Link className="nav-links" to="/login">Login </Link>
-        <Link className="nav-links" to="/register">Home</Link>
+        <Link className="nav-links" to="/register">register</Link>
         </>
  ) }
       </nav>

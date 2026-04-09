@@ -7,6 +7,7 @@ function List(props){
     function handleClick(){
     props.delete(props.id)
 }
+
  return(
     <p className="todo-content" 
     onClick={handleClick}>
@@ -16,3 +17,4 @@ function List(props){
 }
 
 export default List ;
+

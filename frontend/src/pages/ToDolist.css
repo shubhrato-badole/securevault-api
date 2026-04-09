@@ -42,8 +42,10 @@ flex-direction: column;
 
 .pp{
  padding:10px;
-background: #fffbeb; color: #d97706;
-border-radius: 20px;
+background:#f7e6b5;; color: #d97706;
+font-weight: 600;
+ padding: 6px 14px;
+   border-radius: 50px;
 }
 
 .todo-title

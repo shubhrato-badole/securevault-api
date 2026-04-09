@@ -7,6 +7,9 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  font-size: 18px;
+  background-color: rgb(46, 45, 45);
+  color: white;
 }
 
 .add-btn{
@@ -19,10 +22,17 @@
     border-radius: 10px;
     cursor: pointer;
     transition:0.2s;
+    background-color: rgb(46, 45, 45);
 
 
 }
 
 .add-button:hover{
     background: #d49c0f;
+     box-shadow: 0 8px 20px rgba(0,0,0,0.05)
+}
+
+.task-item.completed {
+  background: #e6f7ec;   /* soft green */
+  border: 1px solid #8be0a4;
 }
